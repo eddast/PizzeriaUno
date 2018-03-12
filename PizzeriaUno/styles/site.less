@@ -1,0 +1,977 @@
+body {
+    background-color: #fc7a00;
+
+    .pizzaBackground {
+        background-image: url('http://www.gsfdcy.com/data/img/66/1904933-pizza-wallpaper.jpg');
+        background-size: cover;
+        min-height:150%;
+        background-repeat: no-repeat;
+        min-width : 100%;
+        min-height: 1100px;
+        top: 0;
+        left: 0; 
+        z-index: -100; 
+    }
+    
+    .pickupBody,
+    .orderPage,
+    .offerSelectionBody,
+    .deliveryHeadings,
+    .pageViewHeadings {
+        text-align: center;
+        margin-bottom: 40px;
+        h1 {
+            font-family: Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 40px;
+            color: white;
+            font-weight: 900;
+            margin-left: 25px;
+            font-stretch: ultra-expanded;
+            overflow: hidden;
+        }
+        h2 {
+            font-family: Brush Script MT, Courier New, Courier, monospace;
+            font-size: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px #ff0000;
+        }
+
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: white;
+            font-weight: 900;
+            margin-left: 25px;
+            font-stretch: ultra-expanded;
+            overflow: hidden;
+        }
+    }
+
+    .offerSelectionBody {
+        text-align: left;
+        h1,h2,h3 { text-align: center; }
+    }
+
+    .initialPageContainer {
+        margin: auto 0;
+        padding: 15px;
+        text-align: center;
+        background: #2b0909c5;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+
+        #greeting {
+            margin: 20px;
+            font-family: Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: white;
+            margin-left: 25px;
+            font-stretch: ultra-expanded;
+            overflow: hidden;
+        }
+
+        #tagline {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 220px;
+            text-align: center;
+            font-family: Brush Script MT, Courier New, Courier, monospace;
+            font-size: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px #ff0000;
+            background: black;
+        }
+
+        #logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+        }
+
+        .optionBar {
+            margin: 5px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-family: Helvetica, sans-serif;
+            font-weight: bolder;
+            font-stretch: extra-expanded;
+            font-size: 18px;
+            color: white;
+            margin-left: 10px;
+            text-shadow: 3px 3px 4px #070707;
+            cursor: pointer;
+
+            .options {
+                margin: 35px;
+                background: #fdf90196;
+                border: 2px solid black;
+                padding: 10px 15px 10px 15px;
+                border-radius: 20px;
+                color: white;
+            }
+
+            .optionsOrder {
+                background: #179107;
+            }
+            
+            .options:hover {
+                color: #fc7a00;
+                background: #fdf90156;
+                text-shadow: 2px 2px 4px #070707;
+                text-decoration: none;
+            }
+
+            .optionsOrder:hover {
+                color: #a87d7d;
+                background: #134d0c;
+            }
+        }
+    }
+
+    .loaderPage {
+        background: #2b0909bb;
+        padding: 20px;
+        height: 100%;
+
+        #loadingMessage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 280px;
+            text-align: center;
+            font-family: Brush Script MT, Courier New, Courier, monospace;
+            font-size: 35px;
+            color: white;
+            text-shadow: 2px 2px 4px #ff0000;
+            background: black;
+        }
+    }
+
+    #loadImage {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 17%;
+        animation: Loader-spin infinite 1500ms linear;
+    }
+
+    @keyframes Loader-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .NavigationBar {
+        display: block;
+        z-index: 1000;
+
+        #navBar {
+            display: inline-block;
+            background: #0f1111f8;
+            padding: 10px;
+            width: 100%;
+            height: 117px;
+
+            #navBarLogo {
+                width: 12%;
+                padding-left: 10px;
+                padding-right: 50px;
+            }
+
+            .navBarItem {
+                margin-top: 10px;
+                padding: 2px 40px 10px 2px;
+                padding-right: 70px;
+                font-family: Brush Script MT, Courier New, Courier, monospace;
+                font-size: 30px;
+                color: white;
+                text-shadow: 2px 2px 4px #ff0000;
+            }
+
+            .navBarItem:hover {
+                text-decoration: none;
+                color: #fc7a00;
+                text-shadow: 1px 1px 1px white;
+            }
+
+            .navBarItemRight {
+                margin-top: 20px;
+                float: right;
+            }
+
+            .navBarOrder {
+                background: #1dfa00;
+                border-radius: 40px;
+                margin-right: 40px;
+                padding: 2px 20px;
+                width: 100px;
+            }
+
+            .navBarOrder:hover {
+                background: #1dfa0077;
+            }
+        }
+    }
+    
+    .orderPage,
+    .confirmationBody,
+    .checkoutBody,
+    .offerSelectionBody,
+    .menuBody,
+    .cartBody,
+    .offerBody,
+    .aboutPageBody {
+        display: block;
+        padding: 40px;
+        padding-top: 15px;
+        background-color: #2b0909c5;
+        border-radius: 1px 1px 20px 20px;
+        font-family: Helvetica, sans-serif;
+        color: white;
+        align-content: center;
+    }
+
+    .orderPage {
+
+    }
+
+    .pizzaWrapper {
+        display: inline-block;
+        height: 470px;
+        width: 380px;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        .pizzaInfo:hover {
+            border: 4px solid black;
+            text-decoration: none;
+        }
+
+        .pizzaInfo:hover .pizzaImg{
+            opacity: 0.6;
+            animation: Loader-spin infinite 10000ms linear;
+
+        }
+
+        @keyframes Loader-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .pizzaInfo {
+            height: 90%;
+            background: white;
+            padding: 5px;
+            border-radius: 20px;
+            border: 2px solid black;
+            text-align: center;
+            color: black;
+            cursor: pointer;
+
+            .pizzaImg {
+                padding: 20px;
+                width: 70%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .pizzaName {
+                font-family: Brush Script MT, Courier New, Courier, monospace;
+                font-size: 45px;
+                color: black;
+                text-shadow: 1px 1px 2px #ff0000;
+                z-index: 1000;
+            }
+            .pizzaDescription {
+                padding: 2px;
+                font-family: Helvetica, sans-serif;
+                font-size: 13px;
+                font-style: italic;
+                color: #3a3636;
+                z-index: 1000;
+            }
+            .pizzaPrice {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: 900;
+                font-size: 30px;
+                color: #ff5e00;
+                text-shadow: 1px 1px 1px black;
+            }
+        }
+
+        .pizzaOptions {
+            height: 7%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 200;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: black;
+
+            .pizzaDetails {
+                width: 44%;
+                margin-right: 20px;
+                margin-left: 0px;
+                background: #435a25ce;
+                padding: 5px;
+                padding-right: 30px;
+                float: right;
+                border-radius: 0px 0px 20px 0px;
+                border: 2px solid black;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .pizzaRemove {
+                width: 44%;
+                margin-left: 20px;
+                margin-right: 0px;
+                background: #ff0000;
+                padding: 5px;
+                padding-left: 20px;
+                float: left;
+                border-radius: 0px 0px 0px 20px;
+                border: 2px solid black;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .pizzaOrder {
+                width: 44%;
+                margin-left: 20px;
+                margin-right: 0px;
+                background: #fcc100ab;
+                padding: 5px;
+                padding-left: 20px;
+                float: left;
+                border-radius: 0px 0px 0px 20px;
+                border: 2px solid black;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+    .whiteBackground {
+        background: white;
+        min-height: 1100px;
+    }
+
+    .pizzaDetail {
+
+        margin-top: -400px;
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+        color: black;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 1000px;
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: 700px;
+        top: 0;
+        left: 0; 
+        z-index: -100; 
+
+        .pizzaInfo {
+            min-height: 100%;
+            margin-top: 400px;
+            margin-left: 30px;
+            margin-right: 30px;
+
+            .pizzaName{
+                font-family: Brush Script MT, Courier New, Courier, monospace;
+                font-size: 100px;
+                color: white;
+                text-shadow: 4px 4px 6px red;
+            }
+
+            .pizzaDescription{
+                font-family: Helvetica, sans-serif;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                color: white;
+                text-shadow: 1px 1px 2px black; 
+            }
+
+            .pizzaPrice{
+                font-family: Helvetica, sans-serif;
+                font-size: 75px;
+                font-weight: 900;
+                text-align: center;
+                color: #fc7a00;
+                padding-bottom: 30px;
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: #502102;
+            }
+
+            .pizzaDontMissOut{
+                font-family: Brush Script MT, Courier New, Courier, monospace;
+                font-size: 25px;
+                font-style: 900;
+                margin: 10px;
+                margin-top: -50px;
+                font-weight: bold;
+                color: white;
+                text-shadow: 4px 4px 6px red; 
+            }
+
+            .pizzaAddToCart{
+                margin-top: 500px;
+                width: 200px;
+                font-family: Helvetica, sans-serif;
+                font-size: 20px;
+                font-weight: 900;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 10px;
+                border-radius: 20px;
+                background-color: #31c21e;
+                border: 2px solid #a9ff9d;
+                color: white;
+                text-shadow: 4px 4px 6px black;
+                cursor: pointer;
+            }
+            .pizzaAddToCart:hover{
+                background-color: #179107;
+                color: rgb(247, 119, 0);
+            }
+        }
+    }
+
+    #checkoutButton {
+        float: right;
+        min-width: 300px;
+        font-family: Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px;
+        background-color: #1dfa00;
+        border: 2px solid #050e04;
+        border-radius:20px;
+        color: white;
+        text-shadow: 4px 4px 6px black;
+        cursor: pointer;
+    }
+
+    #pizzaDeleteCartToolTip:hover .toolTipText {
+        margin-left:170px;
+        visibility: visible;
+    }
+
+    #pizzaDeleteCartToolTip {
+        position: relative;
+        display: block;
+    }
+
+    .toolTipText {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        visibility: hidden;
+        font-size: 10px;
+        width: 120px;
+        background-color: #00000075;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px;
+        position: relative;
+        margin: 10px;
+        z-index: 1;
+        top: 50%;
+        left: 0%;
+    }
+
+    .toolTipText::after {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        left: 100%; /* To the left of the tooltip */
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent #00000075;
+    }
+
+    .pizzaDeleteCart {
+        font-size: 33px;
+        color: red;
+        float: right;
+    }
+
+    #back {
+        font-size: 70px;
+        color: #ff0000;
+        position: fixed;
+        cursor: pointer;
+
+        #backToMenu {
+            font-family: Brush Script MT, Courier New, Courier, monospace;
+            margin-left: 70px;
+            margin-top: 10px;
+            font-size: 40px;
+            font-style: 900;
+            font-weight: bold;
+            color: red;
+        }
+    }
+
+    .aboutPageBody {
+        text-align: center;
+        background: #2b0909cc;
+        padding-top: 40px;
+        padding-bottom: 70px;
+
+        #chefs {
+            width: 100%;
+            border: 5px solid black;
+        }
+
+        h1 {
+            font-family: Brush Script MT, Courier New, Courier, monospace;
+            margin-bottom: 40px;
+            font-size: 70px;
+            font-style: 900;
+            font-weight: bold;
+            color: white;
+            text-shadow: 4px 4px 6px red; 
+        }
+        .description {
+            background-color: #00000086;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            color: white;
+            padding-bottom: 20px;
+        }
+
+        #inPizzaWeCrust {
+            font-family: Brush Script MT, Courier New, Courier, monospace;
+            font-size: 35px;
+            font-style: 900;
+            font-weight: bold;
+            color: white;
+            text-shadow: 4px 4px 6px red; 
+        }
+    }
+
+    .offerBody {
+        text-align: center;
+
+        #offerExpl {
+            font-family: Helvetica, sans-serif;
+            font-size: 16px;
+            font-style: italic;
+            color: #ffffffc5;
+        }
+        
+        .offerWrapper {
+            min-height: 450px;
+            margin: 20px;
+            background: white;
+            border: 3px solid black;
+            border-radius: 50px;
+            padding: 20px;
+
+            .offerInfo {
+                margin: auto 0;
+                text-align: center;
+            }
+
+            .offerName {
+                font-family: Helvetica, sans-serif;
+                font-size: 15px;
+                font-style: 900;
+                color: #000000ee;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            .offerImgWrapper {
+                position: relative;
+
+                .offerImg {
+                    width: 75%;
+                    opacity: 0.9;
+                    padding-bottom: 20px;
+                }
+            }
+
+            .offerPrice {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: 900;
+                font-size: 30px;
+                color: #ff5e00;
+                text-shadow: 1px 1px 1px #ffffff7e;
+            }
+
+            .offerValidFor {
+                font-family: Brush Script MT, Courier New, Courier, monospace;
+                font-weight: 900;
+                font-size: 30px;
+                color: #ff0000f5;
+            }    
+        }
+
+        .offerWrapper:hover {
+            opacity: 0.7;
+            color: #746f6f;
+            cursor: pointer;
+        }
+    }
+
+    .showOptionsForCheckout{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 100px;
+        width: 300px;
+        background-color: #be8836;
+        border: 2px solid #380808;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+
+    .showOptionsForCheckout:hover {
+        background-color: #be8836b0;
+    }
+
+    .showOptionsForCheckoutText{
+        text-align: center;
+        line-height: 100px;    
+        font-family: Brush Script MT, Courier New, Courier, monospace;
+        font-weight: 900;
+        font-size: 50px;
+        color: white;  
+        text-shadow: 4px 1px 4px #ff0000f5;
+    }
+
+    #checkoutOrPickupMessage {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #ffffffb0;
+        font-weight: bold;
+        margin-left: 25px;
+        font-stretch: ultra-expanded;
+        overflow: hidden;
+    }
+
+    .confirmationBody {
+        color: white;
+
+        h1 {
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 40px;
+            color: white;
+            font-weight: 900;
+            margin-left: 25px;
+            font-stretch: ultra-expanded;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-family: Brush Script MT, Courier New, Courier, monospace;
+            font-size: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px #ff0000;
+        }
+
+        .userInfoReview {
+            margin: 30px;
+            background-color: #00000079;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 14px;
+            color: white;
+            font-weight: 900;
+            font-stretch: ultra-expanded;
+            overflow: hidden;
+        }
+
+        .reviewTotal {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 900;
+            font-size: 35px;
+            color: #ff5e00;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .col-centered {
+            float: none;
+            margin: 0 auto;
+        }
+    }
+
+    .col-centered {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .confirmOptions {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .confirmOption {
+            width: 200px;
+            font-family: Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: white;
+            font-weight: 900;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            background: #fdf90196;
+            border: 2px solid black;
+            padding: 10px 15px 10px 15px;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .confirmOption:hover {
+            color: #fc7a00;
+            background: #fdf90156;
+            text-shadow: 2px 2px 4px #070707;
+            text-decoration: none;
+        }
+    }
+
+    .offerSelectionItemWrapper,
+    .cartItemWrapper {
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        margin-top: 10px;
+
+        .pizzaInfoSelected {
+            background-color: #9df79dd5;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+            margin-bottom: 5px;
+        }
+        .pizzaInfo {
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+            margin-bottom: 5px;
+        }
+
+        .pizzaInfoSelected,
+        .pizzaInfo { 
+            .pizzaImg {
+                margin-left: 30px;
+                padding: 20px;
+                width: 10%;
+                display: inline-block;
+            }
+            .pizzaName {
+                margin-left: 30px;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+            .pizzaDescription {
+                margin-left: 30px;
+                font-size: 14px;
+                color: gray;
+            }
+            .pizzaPrice {
+                margin-left: 30px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: 900;
+                font-size: 30px;
+                color: #ff5e00;
+                float: right;
+                margin-top: 20px;
+                text-shadow: 1px 1px 1px black;
+            }
+        }
+    }
+
+    .clickableOrderOption {
+        width: 300px;
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: white;
+        font-weight: 900;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        background: #fdf90196;
+        border: 2px solid black;
+        padding: 10px 15px 10px 15px;
+        border-radius: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .clickableOrderOption:hover {
+        color: #fc7a00;
+        background: #fdf90156;
+        text-shadow: 2px 2px 4px #070707;
+        text-decoration: none;
+    }
+
+    .unclickableOrderOption {
+        width: 300px;
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: white;
+        font-weight: 900;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        background: #45444494;
+        border: 2px solid #00000049;
+        padding: 10px 15px 10px 15px;
+        border-radius: 20px;
+        color: #ffffffa6;
+        cursor: not-allowed;
+    }
+
+    .orderErrorMsg {
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-style: italic;
+        color: red;
+        margin: 0 auto;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+
+    .pickupBody,
+    .deliveryBody {
+        display: block;
+        background-color: #2b0909c5;
+        padding: 40px;
+        padding-top: 15px;
+        border-radius: 1px 1px 20px 20px;
+        font-family: Helvetica, sans-serif;
+        align-content: center;
+    }
+
+    .customerForm {
+        margin-top: 2px;
+        margin-bottom: 2px;
+
+        label {
+            color: white;
+        }
+
+        .submitBtn {
+            padding: 30px;
+            margin-top: 0px;
+        }
+
+    }
+
+    .formAttributes {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .offerSelectionItemWrapper:hover {
+        opacity: 0.7;
+        color: #df8621de;
+        cursor: pointer;
+    }
+
+    .offerSelectionItemWrapper {
+        .pizzaDes {
+            margin-left: 10px;
+            font-size: 11px;
+            color: gray;
+        }
+        .pizzaImag {
+            margin-left: 10px;
+            padding: 2px;
+            width: 8%;
+            display: inline-block;
+        }
+    }
+
+    .pizzaInfoSelected {
+        background-color: #ffff0071;
+    }
+
+    .offerCheck {
+        padding-left:5px;
+        font-size: 30px;
+        color: green;
+    }
+
+    .proceedToCheckoutOffer {
+        position: fixed;
+        right: 0; 
+        top: 50%; 
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 22px;
+        color: white;
+        font-weight: 900;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        background: #0084ff;
+        border: 2px solid black;
+        padding: 30px 40px 30px 40px;
+        border-radius: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .proceedToCheckoutOffer:hover {
+        background: #00ffff;
+        color: #b6aeae;
+    }
+
+    .proceedToCheckoutOfferDisabled {
+        opacity: 0.7;
+        background: #201f1f;
+        cursor: not-allowed;
+    }
+
+    .proceedToCheckoutOfferDisabled:hover {
+        opacity: 0.5;
+        background: #201f1f;
+        cursor: not-allowed;
+    }
+
+    .btn-disabled {
+        background-color: gray;
+        cursor: not-allowed;
+    }
+
+    .formErrorText {
+        margin-left: 10px;
+        font-size: 12px;
+        color: white;
+    }
+
+    
+
+}
